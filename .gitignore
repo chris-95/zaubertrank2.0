@@ -6,6 +6,9 @@ Obj/
 UnityGenerated/
 Library/
 Assets/AssetStoreTools*
+Assets/SteamVR*
+ProjectSettings*
+
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
