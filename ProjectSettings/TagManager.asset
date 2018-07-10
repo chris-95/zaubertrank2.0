@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cauldron
+  - Potion1
+  - Potion2
+  - Potion3
+  - BubblePopLarge
   layers:
   - Default
   - TransparentFX
