@@ -4,6 +4,7 @@
 
 Shader "WDR/Distortion" {
 Properties {
+	_Farbe ("Farbe", Color) = (0.500000,0.500000,0.500000,0.500000)
 	_TintColor ("Tint Color", Color) = (0.500000,0.500000,0.500000,0.500000)
 	_BumpAmt  ("Distortion", range (0,128)) = 10
 	_MainTex ("Tint Color (RGB)", 2D) = "white" {}
@@ -44,6 +45,7 @@ CGPROGRAM
 struct appdata_t {
 	float4 vertex : POSITION;
 	float2 texcoord: TEXCOORD0;
+	fixed4 color : COLOR;
 };
 
 struct v2f {
@@ -70,7 +72,7 @@ v2f vert (appdata_t v)
 	o.uvbump = TRANSFORM_TEX( v.texcoord, _BumpMap );
 	o.uvmain = TRANSFORM_TEX( v.texcoord, _MainTex );
 	o.alpha = TRANSFORM_TEX( v.texcoord, _AlphaTex);
-	o.color = _TintColor;
+	o.color = v.color;
 	UNITY_TRANSFER_FOG(o,o.vertex);
 	return o;
 }
@@ -80,6 +82,7 @@ float4 _GrabTexture_TexelSize;
 sampler2D _BumpMap;
 sampler2D _MainTex;
 sampler2D _AlphaTex;
+float4 _Farbe;
 
 half4 frag (v2f i) : SV_Target
 {
@@ -89,7 +92,7 @@ half4 frag (v2f i) : SV_Target
 
 	// calculate perturbed coordinates
 	half alpha = tex2D(_AlphaTex, i.alpha).r;
-	half2 bump = UnpackNormal(tex2D( _BumpMap, i.uvbump )).rg; // we could optimize this by just reading the x & y without reconstructing the Z
+	half2 bump = UnpackNormal(tex2D( _BumpMap, float2(_Time.x+i.uvbump.x, i.uvbump.y))).rg; // we could optimize this by just reading the x & y without reconstructing the Z
 	float2 offset = alpha * (bump + 1) * _BumpAmt * _GrabTexture_TexelSize.xy;
 
 	#ifdef UNITY_Z_0_FAR_FROM_CLIPSPACE //to handle recent standard asset package on older version of unity (before 5.5)
@@ -98,11 +101,11 @@ half4 frag (v2f i) : SV_Target
 		i.uvgrab.xy = offset * i.uvgrab.z + i.uvgrab.xy;
 	#endif
 
-	half4 col = tex2Dproj( _GrabTexture, UNITY_PROJ_COORD(i.uvgrab));
+	half4 col = tex2Dproj( _GrabTexture, UNITY_PROJ_COORD(i.uvgrab)) * fixed4(_Farbe.xyz,1) *  i.color;
 	half4 tint = tex2D(_MainTex, i.uvmain).r;
 
 	//col *= (tint/2+1) * i.color;
-	col.a = alpha * i.color;
+	col.a = alpha;
 
 	//col = half4(i.color.r,i.color.g,i.color.b,i.color.a);
 
