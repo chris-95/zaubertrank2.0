@@ -9,6 +9,15 @@ TagManager:
   - Potion2
   - Potion3
   - BubblePopLarge
+  - BubblePopLarge2
+  - BubblePopSmall
+  - BubblePopSmall2
+  - Smoke
+  - SwirlParticles
+  - Cauldron_goo
+  - GlowBottle
+  - GlowBottle2
+  - GlowBottle3
   layers:
   - Default
   - TransparentFX

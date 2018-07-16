@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Cauldron_goo
+  m_Name: Cauldron_goo 1
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: SILHOUETTE_CURVATURE_BASIC _ALPHABLEND_ON _POM_DISTANCE_MAP _POM_EXTRUSION_MAP
     _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _WETNESS_NONE
@@ -47,12 +47,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 2800000, guid: 01bcf6bff4da0034f81e346a710be418, type: 3}
-        m_Scale: {x: 3, y: 3}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 1, y: 1}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 97f08439c43b786479a6fb5529fc3137, type: 3}
-        m_Scale: {x: 3, y: 3}
-        m_Offset: {x: 2.8942068, y: 2.8942068}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 1, y: 1}
     - _MainTex2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -318,7 +318,7 @@ Material:
     - minDist: 1
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.018166106, g: 0.41176468, b: 0.020880558, a: 1}
+    - _Color: {r: 0.058931667, g: 0.5556645, b: 0.8014706, a: 1}
     - _Color2: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: -1, g: 1, b: 0, a: 0}
     - _CurvatureMultOffset: {r: 0, g: 0, b: 0, a: 0}
