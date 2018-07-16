@@ -18,6 +18,7 @@ TagManager:
   - GlowBottle
   - GlowBottle2
   - GlowBottle3
+  - DrinkBottle
   layers:
   - Default
   - TransparentFX
