@@ -79,5 +79,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Farbe: {r: 0.9188328, g: 0, b: 1, a: 0.19607843}
+    - _Farbe: {r: 1, g: 0, b: 0, a: 0.19607843}
     - _TintColor: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 0.5}

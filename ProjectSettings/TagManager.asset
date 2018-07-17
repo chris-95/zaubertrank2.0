@@ -19,6 +19,7 @@ TagManager:
   - GlowBottle2
   - GlowBottle3
   - DrinkBottle
+  - Potion
   layers:
   - Default
   - TransparentFX

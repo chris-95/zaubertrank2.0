@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 114413676772438886}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Potion3
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8056ffb5b6136424ea7f4f0d87580fb6, type: 2}
+  - {fileID: 2100000, guid: 6438d5ff28f06d5498ba384d6419312e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6871e28f73be94cc2ad06ea1d1c11d11, type: 2}
+  - {fileID: 2100000, guid: e47db907806add749a535067ee33b6e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

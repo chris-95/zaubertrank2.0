@@ -6,6 +6,8 @@ public class TestPotion : MonoBehaviour {
 
 	GameObject testPotion;
 	bool isTrigger = false;
+	public bool ableToDrink = false;
+	Cauldron cauldron;
 
 	private void OnTriggerEnter(Collider collider) {
 		if (collider.CompareTag("DrinkBottle")) {
@@ -24,9 +26,9 @@ public class TestPotion : MonoBehaviour {
 
 	IEnumerator PotionRotation(GameObject testPotion) {
 		while(isTrigger) {
-			if (Vector3.Dot(testPotion.transform.up, Vector3.up) < 0) {
+			if (Vector3.Dot(testPotion.transform.up, Vector3.up) < 0 && cauldron.ableToFill) {
 				testPotion.transform.Find("Full").gameObject.active = true;
-
+				ableToDrink = true;
 
 			}
 			yield return new WaitForSeconds(1.0f);
@@ -35,7 +37,7 @@ public class TestPotion : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		cauldron = GameObject.Find ("Cauldron").GetComponent<Cauldron> ();
 	}
 	
 	// Update is called once per frame

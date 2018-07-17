@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114412154240656530}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1663850643386780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.437, y: 0.789, z: -0.389}
+  m_LocalPosition: {x: -1.264, y: 1.261, z: -1.654}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 4232618929122414}
@@ -121,7 +121,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8056ffb5b6136424ea7f4f0d87580fb6, type: 2}
+  - {fileID: 2100000, guid: cf174804c81a1fc439fce61524bf91c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -203,7 +203,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!64 &64809021199302938
 MeshCollider:
   m_ObjectHideFlags: 1

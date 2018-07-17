@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114571542346834392}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Potion2
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,8 +99,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786032009635204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.801, y: 0.841, z: -0.389}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalPosition: {x: 0.801, y: 0.841, z: 0.225}
+  m_LocalScale: {x: 0.061121315, y: 0.061121304, z: 0.061121304}
   m_Children:
   - {fileID: 4191707377318816}
   - {fileID: 4079692164539608}
@@ -121,7 +121,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6871e28f73be94cc2ad06ea1d1c11d11, type: 2}
+  - {fileID: 2100000, guid: e47db907806add749a535067ee33b6e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8056ffb5b6136424ea7f4f0d87580fb6, type: 2}
+  - {fileID: 2100000, guid: 419ae40ebdde8f647ac070d2adf9cb43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
